@@ -48,7 +48,7 @@ export const RegisterBox = () => {
     }
 
     if (loading) {
-        <p>Wczytywanie danych...</p>
+        return <p>Wczytywanie danych...</p>
     }
 
 
