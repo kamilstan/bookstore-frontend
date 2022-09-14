@@ -1,0 +1,23 @@
+.main-header {
+    background-color: #868689FF;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.main-header__logo {
+    color: white;
+    justify-self: flex-start;
+}
+
+.main-header__user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 80px;
+    width: 220px;
+}

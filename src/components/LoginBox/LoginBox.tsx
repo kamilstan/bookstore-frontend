@@ -69,10 +69,10 @@ export const LoginBox = () => {
 
             switch (result.role) {
                 case 'admin':
-                    navigate('/admin');
+                    navigate(`/admin/${result.id}`);
                     break;
                 case 'customer':
-                    navigate('/customer');
+                    navigate(`/customer/${result.id}`);
                     break;
             }
         } catch (err) {
@@ -86,10 +86,10 @@ export const LoginBox = () => {
         if (role !== '') {
             switch (role) {
                 case 'admin':
-                    navigate('/admin');
+                    navigate(`/admin`);
                     break;
                 case 'customer':
-                    navigate('/customer/');
+                    navigate(`/customer`);
                     break;
             }
         }

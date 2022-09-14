@@ -1,6 +1,7 @@
 import {Avatar, Button, Grid, Link, Paper, TextField, Typography} from "@mui/material";
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import {SyntheticEvent, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 interface FormValues  {
     fullName: string;
@@ -11,6 +12,7 @@ interface FormValues  {
 
 export const RegisterBox = () => {
 
+    let navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState<FormValues>({
         fullName: '',
@@ -41,6 +43,7 @@ export const RegisterBox = () => {
                 body: JSON.stringify(form),
             });
             const data = await res.json();
+            navigate('../login');
 
         } finally {
             setLoading(false);
