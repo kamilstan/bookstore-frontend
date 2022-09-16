@@ -86,7 +86,7 @@ export const LoginBox = () => {
         if (role !== '') {
             switch (role) {
                 case 'admin':
-                    navigate(`/admin`);
+                    navigate(`/admin/books`);
                     break;
                 case 'customer':
                     navigate(`/customer`);

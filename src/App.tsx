@@ -5,10 +5,12 @@ import './App.css';
 import {LoginView} from "./pages/LoginView/LoginView";
 import {Routes, Route} from "react-router-dom";
 import {RegisterView} from "./pages/RegisterView/RegisterView";
-import {AdminView} from "./pages/AdminView/AdminView";
+import {AdminForCustomersView} from "./pages/AdminForCustomersView/AdminForCustomersView";
+import {AdminForBooksView} from "./pages/AdminForBooksView/AdminForBooksView";
 import {CustomerView} from "./pages/CustomerView/CustomerView";
 import {BookView} from "./pages/BookView/BookView";
 import { SearchContext } from './contexts/search.context';
+import {CustomerProfileView} from "./pages/CustomerProfileView/CustomerProfileView";
 
 function App() {
 
@@ -31,12 +33,20 @@ function App() {
                   element={<RegisterView />}
               />
               <Route
-                  path="/admin"
-                  element={<AdminView />}
+                  path="/admin/books"
+                  element={<AdminForBooksView />}
+              />
+              <Route
+                  path="/admin/customers"
+                  element={<AdminForCustomersView />}
               />
               <Route
                   path="/customer"
                   element={<CustomerView />}
+              />
+              <Route
+                  path="/customer/profile"
+                  element={<CustomerProfileView />}
               />
               <Route
                   path="/book/:bookId"

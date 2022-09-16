@@ -6,7 +6,11 @@ import {SearchContext} from "../../contexts/search.context";
 import "./BookList.css"
 import {BookItem} from "../BookItem/BookItem";
 
-export const BooksList = () => {
+interface Props {
+    info: string;
+}
+
+export const BooksList = (props: Props) => {
 
     const {search} = useContext(SearchContext);
 
@@ -25,7 +29,7 @@ export const BooksList = () => {
 
         <main className="books">
 
-            <h2>Sprawdź szeroką ofertę naszych książek!</h2>
+            <h2>{props.info}</h2>
             <ul className="booksList">
                 {
                     books.map((book, index) => (

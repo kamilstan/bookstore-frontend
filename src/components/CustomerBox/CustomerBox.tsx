@@ -41,11 +41,11 @@ export const CustomerBox = () => {
 
 
     return (
-        <>
+        <div className='customer-box'>
             <Header role='customer' id={id} email={customerData.email} />
-            <Search/>
-            <BooksList/>
-        </>
+            <Search placeholder='Wyszukaj wg tytułu..'/>
+            <BooksList info='Sprawdź szeroką ofertę naszych książek!'/>
+        </div>
 
 
     )
