@@ -34,7 +34,7 @@ const StyledMenu = styled((props: MenuProps) => (
     '& .MuiPaper-root': {
         marginTop: theme.spacing(1),
         minWidth: 220,
-        backgroundColor: '#727274FF',
+        backgroundColor: '#4c4c50',
         color: 'white',
     },
     '& .MuiList-root': {

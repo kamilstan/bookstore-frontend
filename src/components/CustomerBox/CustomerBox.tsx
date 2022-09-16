@@ -4,6 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {StoreState} from "../../redux-toolkit/store";
 import {set} from "react-hook-form";
 import { CustomerFrontEntity } from 'types';
+import {BooksList} from "../BookList/BookList";
+import {Search} from "../Search/Search";
 
 export const CustomerBox = () => {
 
@@ -40,7 +42,9 @@ export const CustomerBox = () => {
 
     return (
         <>
-        <Header role='customer' id={id} email={customerData.email}  />
+            <Header role='customer' id={id} email={customerData.email} />
+            <Search/>
+            <BooksList/>
         </>
 
 
